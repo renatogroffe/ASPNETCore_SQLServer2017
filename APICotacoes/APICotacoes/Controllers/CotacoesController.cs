@@ -24,7 +24,7 @@ namespace APICotacoes.Controllers
                           ",ValorTurismo AS 'Cotacoes.Turismo' " +
                     "FROM dbo.Cotacoes " +
                     "ORDER BY NomeMoeda " +
-                    "FOR JSON AUTO, ROOT('Moedas')");
+                    "FOR JSON PATH, ROOT('Moedas')");
             }
 
             return Content(valorJSON, "application/json");
